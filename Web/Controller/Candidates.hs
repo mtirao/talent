@@ -21,10 +21,12 @@ instance Controller CandidatesController where
 
     action EditCandidateAction { candidateId } = do
         candidate <- fetch candidateId
+        statuses <- query @Status |> fetch
         render EditView { .. }
 
     action UpdateCandidateAction { candidateId } = do
         candidate <- fetch candidateId
+        statuses <- query @Status |> fetch
         candidate
             |> buildCandidate
             |> ifValid \case

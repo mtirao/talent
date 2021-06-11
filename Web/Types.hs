@@ -17,6 +17,7 @@ data CandidatesController
     | EditCandidateAction { candidateId :: !(Id Candidate) }
     | UpdateCandidateAction { candidateId :: !(Id Candidate) }
     | DeleteCandidateAction { candidateId :: !(Id Candidate) }
+    | FilterCandidatesAction {candidatesState :: !(Text)}
     deriving (Eq, Show, Data)
 
 data StatusController

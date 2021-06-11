@@ -5,8 +5,15 @@ import Web.View.Candidates.Index
 import Web.View.Candidates.New
 import Web.View.Candidates.Edit
 import Web.View.Candidates.Show
+import Web.View.Candidates.FilterCandidates
 
 instance Controller CandidatesController where
+    action FilterCandidatesAction { candidatesState } = do
+        candidates <- query @Candidate
+            |> filterWhere (#status, candidatesState)
+            |> fetch
+        render FilterCandidatesView { .. }
+
     action CandidatesAction = do
         candidates <- query @Candidate |> fetch
         render IndexView { .. }

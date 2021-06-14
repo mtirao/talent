@@ -13,11 +13,28 @@ instance CanSelect Status where
 
 instance View EditView where
     html EditView { .. } = [hsx|
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href={CandidatesAction}>Candidates</a></li>
-                <li class="breadcrumb-item active">Edit Candidate</li>
-            </ol>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Talent</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="breadcrumb-item">
+                        <a class="nav-link" href={CandidatesAction}>Candidates</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=new">New</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=interviewed">Interviewed</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=contacted">Contacted</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <h1>Edit Candidate</h1>
         {renderForm candidate statuses}

@@ -13,7 +13,6 @@ instance View NewView where
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="breadcrumb-item active">New Candidate</li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/Candidates">Candidates</a>
                     </li>

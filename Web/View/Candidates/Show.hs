@@ -13,7 +13,6 @@ instance View ShowView where
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="breadcrumb-item active">Show Candidate</li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/Candidates">Candidates</a>
                     </li>
@@ -25,6 +24,9 @@ instance View ShowView where
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/FilterCandidates?candidatesState=contacted">Contacted</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=tech interview">Tech interview</a>
                     </li>
                 </ul>
             </div>

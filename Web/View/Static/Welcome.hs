@@ -25,6 +25,9 @@ instance View WelcomeView where
                     <li class="nav-item active">
                         <a class="nav-link" href="/FilterCandidates?candidatesState=contacted">Contacted</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=tech interview">Tech interview</a>
+                    </li>
                 </ul>
             </div>
         </nav>

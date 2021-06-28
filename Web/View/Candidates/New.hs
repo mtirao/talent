@@ -20,13 +20,19 @@ instance View NewView where
                         <a class="nav-link" href="/FilterCandidates?candidatesState=new">New</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/FilterCandidates?candidatesState=interviewed">Interviewed</a>
-                    </li>
-                    <li class="nav-item active">
                         <a class="nav-link" href="/FilterCandidates?candidatesState=contacted">Contacted</a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=interviewed">Interviewed</a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="/FilterCandidates?candidatesState=tech interview">Tech interview</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=offered">Job Offer</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/FilterCandidates?candidatesState=hired">Hired</a>
                     </li>
                 </ul>
             </div>
